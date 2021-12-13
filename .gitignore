@@ -1,0 +1,6 @@
+reports/
+tests_output/
+npm-debug.log.*
+app-[1-9].js
+app-complete.js
+node_modules/
