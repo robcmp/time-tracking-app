@@ -1,10 +1,10 @@
-class TimerDashboard extends React.Component {
+class TimersDashboard extends React.Component {
   render() {
     return (
       <div className="ui three column centered grid">
         <div className="column">
           <EditableTimerList />
-          <ToggleableTimerForm isOpen={true} />
+          <ToggleableTimerForm isOpen={false} />
         </div>
       </div>
     );
@@ -55,6 +55,7 @@ class EditableTimer extends React.Component {
 
 class TimerForm extends React.Component {
   render() {
+    const submitText = this.props.title ? "Update" : "Create";
     return (
       <div className="ui centered card">
         <div className="content">
@@ -120,3 +121,5 @@ class Timer extends React.Component {
     );
   }
 }
+
+ReactDOM.render(<TimersDashboard />, document.getElementById("content"));
